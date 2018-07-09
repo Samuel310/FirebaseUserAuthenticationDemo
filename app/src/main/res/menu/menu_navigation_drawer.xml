@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Manage Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/m_changeName"
+                    android:title="Change Name"/>
+
+                <item
+                    android:id="@+id/m_changeProfilePhoto"
+                    android:title="Change Profile Image"/>
+
+
+                <item
+                    android:id="@+id/m_changePhoneNo"
+                    android:title="Change Phone No."/>
+
+
+                <item
+                    android:id="@+id/m_changeEmail"
+                    android:title="Change Email"/>
+
+
+                <item
+                    android:id="@+id/m_changePassword"
+                    android:title="Change Password"/>
+
+                <item
+                    android:id="@+id/m_verifyEmail"
+                    android:title="Verify Email"/>
+
+                <item
+                    android:id="@+id/m_deleteAccount"
+                    android:title="Delete Account"/>
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/m_shareApp"
+                android:title="Share"/>
+
+            <item
+                android:id="@+id/m_about"
+                android:title="About"/>
+        </menu>
+    </item>
+
+</menu>
