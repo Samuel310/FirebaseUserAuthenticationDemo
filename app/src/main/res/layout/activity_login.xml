@@ -1,18 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".Login.LoginActivity"
+    android:background="@color/colorPrimaryDark"
+    android:id="@+id/myCoordinate_layout">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGray"
+        app:corner_radius="40dp">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/ic_app_icon" />
+
+        <ScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_email_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_image="@drawable/ic_mail_outline_black_24dp"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_animationDuration="100">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@android:color/black" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_password_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_image="@drawable/ic_lock_outline_black_24dp"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_animationDuration="100">
+
+                    <com.marlonmafra.android.widget.EditTextPassword
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@android:color/black"
+                        app:hidePasswordIcon="@drawable/ic_visibility_off_black_24dp"
+                        app:iconPosition="right"
+                        app:showPasswordIcon="@drawable/ic_visibility_black_24dp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:mrl_rippleOverlay="true">
+
+                    <Button
+                        android:id="@+id/btn_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/lightGray"
+                        android:text="Sign in"
+                        android:background="@color/colorPrimaryDark" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/myRipple_recoverPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:mrl_rippleOverlay="true"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_recover_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Recover Password"
+                        android:textColor="@color/lightGray" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@+id/myRipple_recoverPassword"
+                    android:layout_marginTop="15dp"/>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/myRipple_CreateAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mrl_rippleOverlay="true"
+                    android:layout_marginTop="15dp">
+
+                    <Button
+                        android:id="@+id/btn_create_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:textColor="@color/lightGray"
+                        android:text="Create Account" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi_loadingIndicator"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:indicatorColor="@color/colorPrimaryDark"
+            app:indicatorName="LineScaleIndicator"
+            android:layout_below="@+id/myScrollView"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginTop="10dp">
+
+        </com.wang.avi.AVLoadingIndicatorView>
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home.ChangeProfileImage">
+    tools:context=".Home.ChangeProfileImage"
+    android:background="@color/colorPrimary">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/my_imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@color/colorPrimaryDark"
+            app:civ_border_width="5dp"
+            app:civ_border_color="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"/>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rip_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            app:mrl_rippleOverlay="true">
+
+            <Button
+                android:id="@+id/btn_Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="Cancel image"
+                android:padding="10dp"/>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_imageView"
+            android:layout_marginTop="50dp"
+            app:mrl_rippleOverlay="true"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/btn_selectImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="Select Image"
+                android:padding="10dp"/>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:mrl_rippleOverlay="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:id="@+id/btn_uploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/lightGray"
+                android:text="Set as Profile image"
+                android:padding="10dp"/>
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/my_loadingIndicator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            style="@style/AVLoadingIndicatorView.Small"
+            app:indicatorColor="@android:color/black"
+            app:indicatorName="LineScaleIndicator"
+            android:visibility="gone"
+            android:layout_below="@+id/rip_btnCancel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

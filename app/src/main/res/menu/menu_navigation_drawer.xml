@@ -7,48 +7,50 @@
 
                 <item
                     android:id="@+id/m_changeName"
-                    android:title="Change Name"/>
+                    android:title="Change Name"
+                    android:icon="@drawable/ic_person_outline_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
                 <item
                     android:id="@+id/m_changeProfilePhoto"
-                    android:title="Change Profile Image"/>
+                    android:title="Change Profile Image"
+                    android:icon="@drawable/ic_image_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
 
                 <item
                     android:id="@+id/m_changePhoneNo"
-                    android:title="Change Phone No."/>
+                    android:title="Change Phone No."
+                    android:icon="@drawable/ic_smartphone_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
 
                 <item
                     android:id="@+id/m_changeEmail"
-                    android:title="Change Email"/>
+                    android:title="Change Email"
+                    android:icon="@drawable/ic_mail_outline_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
 
                 <item
                     android:id="@+id/m_changePassword"
-                    android:title="Change Password"/>
+                    android:title="Change Password"
+                    android:icon="@drawable/ic_lock_outline_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
                 <item
                     android:id="@+id/m_verifyEmail"
-                    android:title="Verify Email"/>
+                    android:title="Verify Email"
+                    android:icon="@drawable/ic_verified_user_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
                 <item
                     android:id="@+id/m_deleteAccount"
-                    android:title="Delete Account"/>
+                    android:title="Delete Account"
+                    android:icon="@drawable/ic_delete_forever_black_24dp"
+                    android:iconTint="@color/lightGray"/>
 
             </group>
-        </menu>
-    </item>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/m_shareApp"
-                android:title="Share"/>
-
-            <item
-                android:id="@+id/m_about"
-                android:title="About"/>
         </menu>
     </item>
 

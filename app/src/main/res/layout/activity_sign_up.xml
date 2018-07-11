@@ -1,9 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateNewUser.SignUpActivity">
+    tools:context=".CreateNewUser.SignUpActivity"
+    android:background="@color/colorPrimaryDark">
 
-</android.support.constraint.ConstraintLayout>
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/lightGray"
+        app:corner_radius="30dp">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/myLoadingIndicator2"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimaryDark"
+            app:indicatorName="LineScaleIndicator"
+            android:layout_marginBottom="10dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_name_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_image="@drawable/ic_person_outline_black_24dp"
+                    app:mtf_animationDuration="100">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:textColor="@android:color/black"/>
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_email_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_image="@drawable/ic_mail_outline_black_24dp"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_animationDuration="100">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@android:color/black" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_password_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_image="@drawable/ic_lock_outline_black_24dp"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_animationDuration="100">
+
+                    <com.marlonmafra.android.widget.EditTextPassword
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="@android:color/black"
+                        app:hidePasswordIcon="@drawable/ic_visibility_off_black_24dp"
+                        app:iconPosition="right"
+                        app:showPasswordIcon="@drawable/ic_visibility_black_24dp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_passwordConf_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_image="@drawable/ic_lock_outline_black_24dp"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_animationDuration="100">
+
+                    <com.marlonmafra.android.widget.EditTextPassword
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:textColor="@android:color/black"
+                        app:hidePasswordIcon="@drawable/ic_visibility_off_black_24dp"
+                        app:iconPosition="right"
+                        app:showPasswordIcon="@drawable/ic_visibility_black_24dp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/mtf_phoneNo_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_backgroundColor="@color/colorPrimaryLight"
+                    app:mtf_labelColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    app:mtf_openKeyboardOnFocus="true"
+                    app:mtf_image="@drawable/ic_smartphone_black_24dp"
+                    app:mtf_animationDuration="100">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone (Optional)"
+                        android:inputType="phone"
+                        android:textColor="@android:color/black" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mrl_rippleOverlay="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp">
+
+                    <Button
+                        android:id="@+id/btn_signUp_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="Sign UP"
+                        android:textColor="@color/lightGray"/>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

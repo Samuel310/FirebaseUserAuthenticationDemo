@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/userData_loadingIndicator2"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="81dp"
+            android:elevation="10dp"
+            android:visibility="gone"
+            app:indicatorColor="@android:color/black"
+            app:indicatorName="LineScaleIndicator" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profileImage_field"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:src="@color/colorPrimaryDark"
+            android:visibility="visible"
+            app:civ_border_color="@android:color/black"
+            app:civ_border_width="5dp" />
+
+        <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/civ_profileImage_field"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/black"
+            app:corner_radius="50dp">
+
+            <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:corner_radius="50dp">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/userData_loadingIndicator"
+                    style="@style/AVLoadingIndicatorView.Small"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    app:indicatorColor="@android:color/black"
+                    app:indicatorName="LineScaleIndicator" />
+
+                <TextView
+                    android:id="@+id/tv_nameDisplay_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_phoneNoDisplay_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_emailDisplay_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_emailVerificationDisp_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightGray"
+                    android:textSize="12sp" />
+
+            </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+        </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+    </RelativeLayout>
+
+</merge>
